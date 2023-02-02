@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Assets.scripts.Utils;
+using Assets.scripts.Utils;   
 using C2BNet;
 using UnityEngine;
 
 namespace GameLogic
-{
+{  
     public  class Character:LiveEntity
     {
         int userid_;

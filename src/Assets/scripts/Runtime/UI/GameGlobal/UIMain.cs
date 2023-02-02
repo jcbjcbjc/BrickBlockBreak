@@ -1,39 +1,71 @@
-
 using NetWork;
 using Services;
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace UI
+public class UIMain : BaseUIForm
 {
-    public class UIMain : BaseUIForm
-    {
-        private EventSystem eventSystem;
+	
+	public Button Single;
+	public Button Multiple;
+	public Button Quartic;
+	public Button Hexagon;
+	public Button Classic;
+	
+	public Button Return;
+	public bool _music=true;
 
-        private void Awake()
-        {
-            eventSystem = ServiceLocator.Get<EventSystem>();
-            eventSystem.AddListener(EEvent.OnEnterGameProcess, () =>
-            {
-                CloseUIForm();
-            });
-        }
-        private void Start()
-        {
-            RigisterButtonObjectEvent("MatchButton", Match);
-        }
+	void Start()
+	{
+		Single.onClick.AddListener(() => {
+			OnStartSingle();
+		});
+		Multiple.onClick.AddListener(() => {
+			OnStartMultiple();
+		});
+		Quartic.onClick.AddListener(() => {
+			OnStartQuartic();
+		});
+		Hexagon.onClick.AddListener(() => {
+			OnStartQuartic();
+		});
+		Classic.onClick.AddListener(() => {
+			OnStartClassic();
+		});
+		Return.onClick.AddListener(() => 
+		{
+			_close_game();
+		});
+	}
+	void OnStartSingle() {
 
-        public void setMsg(string msg)
-        {
-            //this.msgLabel.string = msg;
-        }
-
-        
-        public void Match(GameObject go)
-        {
-            ServiceLocator.Get<MatchService>().SendStartMatch();
-        }
+	}
+	void OnStartMultiple()
+	{
+        ServiceLocator.Get<MatchService>().SendStartMatch();
     }
-}
 
+	void OnStartQuartic()
+	{
+
+	}
+
+	void OnStartHexagon()
+	{
+
+	}
+
+	void OnStartClassic()
+	{
+
+	}
+	void OnStartTutor()
+	{
+	}
+	public void _close_game()
+	{
+	}
+}

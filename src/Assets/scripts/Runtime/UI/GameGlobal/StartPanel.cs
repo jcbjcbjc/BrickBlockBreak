@@ -41,8 +41,8 @@ namespace UI {
 
 		void OnStartClick()
 		{
-
 			CloseUIForm();
+			OpenUIForm("LoginPanel");
 		}
 		void OnStartTutor()
 		{

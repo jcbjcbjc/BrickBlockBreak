@@ -79,7 +79,7 @@ namespace NetWork
 				Debug.Log("连接服务器成功");
 				Start();
 
-				ServiceLocator.Get<UserService>().SendLogin("123456789","123456789");
+				// ServiceLocator.Get<UserService>().SendLogin("1234567891","1234567891");
 
 				StartHeartBeat();
 

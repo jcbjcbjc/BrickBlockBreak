@@ -30,7 +30,7 @@ namespace Assets.scripts
             NetGameClient.GetInstance().Init();
             NetBattleClient.GetInstance().Init();
 
-            UIManager.GetInstance().ShowUIForms("UIMain");
+            UIManager.GetInstance().ShowUIForms("StartPanel");
             UIManager.GetInstance().ShowUIForms("GameOverPanel");
         }
 

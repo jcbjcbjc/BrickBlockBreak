@@ -114,6 +114,11 @@ namespace GameLogic
             {    //对局模式
                 handleFrameTimer.OnComplete += CapturePlayerOpts;
                 handleFrameTimer.Initialize(NetConfig.FrameTime/1000);
+
+                #region LWC
+                UIManager.GetInstance().ShowUIForms("Classic");
+
+                #endregion
             }
             else if (GameData.battleMode == BattleMode.Live)
             {  //观看直播模式
@@ -312,8 +317,7 @@ namespace GameLogic
                return;
             }
 
-            GameData.frameHandles.UserId = ServiceLocator.Get<User>().user.Id ;
-            // LogUtil.log(this.frameHandle);
+            GameData.frameHandles.UserId = ServiceLocator.Get<User>().user.Id;
             //发送操作
 
             ServiceLocator.Get<GameLogicService>().SendFrameHandle(GameData.frameHandles);
@@ -324,7 +328,7 @@ namespace GameLogic
         public void AddPlayerOpt(FrameHandle frameHandle)
         {
             frameHandle.UserId = ServiceLocator.Get<User>().user.Id;
-            frameHandle.OpretionId= GameData.NextOperationId++;
+            // frameHandle.OpretionId = GameData.NextOperationId++;
             GameData.PredictedInput.Add(frameHandle);
             GameData.frameHandles.FrameHandles.Add(frameHandle);
         }

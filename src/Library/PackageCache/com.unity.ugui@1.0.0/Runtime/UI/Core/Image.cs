@@ -884,7 +884,7 @@ namespace UnityEngine.UI
 
         private void TrackSprite()
         {
-            if (activeSprite != null && (activeSprite.texture == null || activeSprite.isUsingPlaceholder))
+            if (activeSprite != null && activeSprite.texture == null)
             {
                 TrackImage(this);
                 m_Tracked = true;
@@ -1132,7 +1132,7 @@ namespace UnityEngine.UI
             if (tileHeight <= 0)
                 tileHeight = yMax - yMin;
 
-            if (activeSprite != null && (hasBorder || activeSprite.packed || activeSprite.texture.wrapMode != TextureWrapMode.Repeat))
+            if (activeSprite != null && (hasBorder || activeSprite.packed || activeSprite.texture != null && activeSprite.texture.wrapMode != TextureWrapMode.Repeat))
             {
                 // Sprite has border, or is not in repeat mode, or cannot be repeated because of packing.
                 // We cannot use texture tiling so we will generate a mesh of quads to tile the texture.
@@ -1862,10 +1862,7 @@ namespace UnityEngine.UI
                 if (null != g.activeSprite && spriteAtlas.CanBindTo(g.activeSprite))
                 {
                     g.SetAllDirty();
-                    if (!spriteAtlas.IsPlaceholder())
-                    {
-                        m_TrackedTexturelessImages.RemoveAt(i);
-                    }
+                    m_TrackedTexturelessImages.RemoveAt(i);
                 }
             }
         }
@@ -1890,6 +1887,7 @@ namespace UnityEngine.UI
         {
             SetMaterialDirty();
             SetVerticesDirty();
+            SetRaycastDirty();
         }
 
 #if UNITY_EDITOR

@@ -17,7 +17,7 @@ namespace MyTimer
             Target = temp;
             Restart(true);
         }
-    }
+    }      
 
     /// <summary>
     /// 基本的反复变化

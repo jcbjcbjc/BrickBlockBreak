@@ -52,7 +52,7 @@ namespace NetWork
         public void SendHeartBeat()
         {
             
-            LogUtil.log("HeartBeatRequest");
+            //LogUtil.log("HeartBeatRequest");
             C2GNetMessage message = new C2GNetMessage
             {
                 Request = new NetMessageRequest
@@ -69,7 +69,7 @@ namespace NetWork
         public void OnHeartBeat(object any)
         {
             C2GNet.HeartBeatResponse response = any as C2GNet.HeartBeatResponse;
-            LogUtil.log("HeartBeatResponse");
+            //LogUtil.log("HeartBeatResponse");
 
             //MessageCenter.dispatch(MessageType.OnHeartBeat_UI, response);
         }
@@ -80,7 +80,7 @@ namespace NetWork
         */
         public void SendBattleHeartBeat()
         {
-            LogUtil.log("HeartBeatRequest");
+            //LogUtil.log("HeartBeatRequest");
 
             var userId = ServiceLocator.Get<User>().user.Id;
             C2BNetMessage message = new C2BNetMessage
@@ -147,12 +147,10 @@ namespace NetWork
                 ServiceLocator.Get<User>().isLogin = true;
                 ServiceLocator.Get<User>().user = response.User;
 
-                //SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
-
-                //director.loadScene('UIMain');
-
-                //ChatManager.Instance.Init();
-                //ChatManager.Instance.InitPrivateUserList();
+                #region LWC
+                UIManager.GetInstance().CloseUIForms("LoginPanel");
+                UIManager.GetInstance().ShowUIForms("UIMain");
+                #endregion
 
             }
             else

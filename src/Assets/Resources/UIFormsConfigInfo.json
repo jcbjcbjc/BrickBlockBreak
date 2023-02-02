@@ -38,7 +38,10 @@
 "Value":"UIPrefabs\\RoomPanel"},
 
 {"Key":"StartPanel",
-"Value":"UIPrefabs\\StartPanel"}
+"Value":"UIPrefabs\\StartPanel"},
+
+{"Key":"Classic",
+"Value":"Battle\\Classic"}
 
 ]
 }

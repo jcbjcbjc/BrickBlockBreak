@@ -1,4 +1,5 @@
 ﻿
+using NetWork;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -45,7 +46,7 @@ namespace UI
 				//SendMessage(ProConst.SHOW_MESSAGE_MESSAGE, "", strArray);
 				return;
 			}
-
+			Services.ServiceLocator.Get<UserService>().SendLogin(_nameInput.text, _pwdInput.text);
 		}
 
 		void OnRegisterClick(GameObject go)
@@ -58,6 +59,7 @@ namespace UI
 		{
 
 			CloseUIForm();
+			OpenUIForm("StartPanel");
 		}
 
 		

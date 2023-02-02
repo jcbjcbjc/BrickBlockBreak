@@ -12,7 +12,7 @@ public class Capture : MonoBehaviour
     private void Awake()
     {
         eventSystem_ = ServiceLocator.Get<EventSystem>();
-    }
+    }   
 
     // Update is called once per frame
     void Update()

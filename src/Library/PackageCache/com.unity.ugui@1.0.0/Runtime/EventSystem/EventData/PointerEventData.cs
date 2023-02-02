@@ -238,6 +238,14 @@ namespace UnityEngine.EventSystems
         /// Add this value to the radius to get the maximum touch radius, subtract it to get the minimum touch radius.
         /// </remarks>
         public Vector2 radiusVariance { get; set; }
+        /// <summary>
+        /// Specifies in the case of a pointer exit if the pointer has fully exited the area or if it has just entered a child.
+        /// </summary>
+        public bool fullyExited { get; set; }
+        /// <summary>
+        /// Specifies in the case of a pointer enter if the pointer has entered a new area or if it has just reentered a parent after leaving a child.
+        /// </summary>
+        public bool reentered { get; set; }
         /// <seealso cref="UnityEngine.UIElements.IPointerEvent" />
 
         public PointerEventData(EventSystem eventSystem) : base(eventSystem)

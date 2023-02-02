@@ -43,18 +43,13 @@ namespace GameLogic
             //    }
             //}
 
-       
 
 
-            foreach (var character in characterList)
+            foreach (FrameHandle fh in frameHandles)
             {
-                foreach (FrameHandle fh in frameHandles)
-                {
-                    if (fh.UserId == character.Userid)
-                    {
-                        character.update(fh);
-                    }
-                }
+                #region LWC
+                UIControl.Instance.HandleMessage(fh);
+                #endregion
             }
 
             //以下是其他生物的逻辑
