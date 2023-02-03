@@ -9,3 +9,4 @@ public class Ce : MonoBehaviour
         DontDestroyOnLoad(this);  
     }
 }
+  

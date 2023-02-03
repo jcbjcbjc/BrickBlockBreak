@@ -117,7 +117,7 @@ namespace GameLogic
 
                 #region LWC
                 UIManager.GetInstance().ShowUIForms("Classic");
-
+                eventSystem.Invoke(EEvent.OnLoadClassic);
                 #endregion
             }
             else if (GameData.battleMode == BattleMode.Live)

@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace GameLogic
 {
-    public class CharacterManager :Service
+    public class CharacterManager : Service
     {
         List<Character> characterList_ = new List<Character>();
 
@@ -52,8 +52,8 @@ namespace GameLogic
             LogUtil.log("生成角色的队伍号是", roomUser.TeamId, "角色的userid是", roomUser.UserId);
 
 
-            GameObject capture = (GameObject)Resources.Load("Prefabs/capture");
-            capture = Instantiate(capture);
+            //GameObject capture = (GameObject)Resources.Load("Prefabs/capture");
+            //capture = Instantiate(capture);
 
             //正确的
             AddCharacter(character);

@@ -42,7 +42,7 @@ namespace NetWork
 
 		Metronome timerTask1;
 
-		Socket TcpSocket;
+		private Socket TcpSocket;
 
 		ByteBuf TCPreadbuf = new ByteBuf(1024 * 1024);
 		byte[] buf = new byte[1024 * 1024];

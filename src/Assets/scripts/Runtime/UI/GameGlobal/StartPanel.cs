@@ -14,7 +14,7 @@ namespace UI {
 		private void Awake()
 		{
 
-		}
+		} 
 		void Start()
 		{
 			_loginButton = GameObject.Find("StartButton").GetComponent<Button>();

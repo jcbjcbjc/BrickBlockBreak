@@ -113,7 +113,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"D:/U3D/unique-project-client-main/src/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"D:/U3D/BrickBlockBreak/src/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -197,6 +197,9 @@
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+-r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
+-r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
+-r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll"
