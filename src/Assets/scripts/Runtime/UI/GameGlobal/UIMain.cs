@@ -1,3 +1,4 @@
+using Managers;
 using NetWork;
 using Services;
 using System;
@@ -46,6 +47,7 @@ public class UIMain : BaseUIForm
 	void OnStartMultiple()
 	{
         ServiceLocator.Get<MatchService>().SendStartMatch();
+		UIManager.GetInstance().CloseUIForms("UIMain");
     }
 
 	void OnStartQuartic()

@@ -115,7 +115,7 @@
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/scripts/Runtime/ThirdParty/Protobuf/Google.Protobuf.dll"
 -r:"Assets/scripts/Runtime/ThirdParty/Protobuf/System.Runtime.CompilerServices.Unsafe.dll"
--r:"D:/U3D/unique-project-client-main/src/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"D:/U3D/BrickBlockBreak/src/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -198,6 +198,8 @@
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+-r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
+-r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll"
 -r:"D:/Unity/Editor/2021.3.16f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.AppContext.dll"

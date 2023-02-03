@@ -92,6 +92,7 @@ public enum EEvent
      OnWorldElementExecuteOnceSuccess ,
      OnAddOptClient ,
      OnEnterGameProcess,
+     OnGameLogicOver, 
 
     ////////////////////////
     ///ÁÖ²©çñ///////////////
@@ -114,6 +115,6 @@ public enum EEvent
 
     ///////////////////////
     ///liweicheng//////////////
-
+    OnLoadClassic
     ///liweicheng//////////////
 }

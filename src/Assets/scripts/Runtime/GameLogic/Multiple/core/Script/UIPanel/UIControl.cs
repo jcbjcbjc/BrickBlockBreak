@@ -1,6 +1,7 @@
 using Assets.scripts.Utils;
 using C2BNet;
 using GameLogic;
+using Managers;
 using NetWork;
 using Services;
 using System;
@@ -47,7 +48,7 @@ public class UIControl : Singleton<UIControl>
     public Action action;
     [SerializeField] int nowPlayer;
     [SerializeField] int[] actPoints;
-    int[] banNumber;
+    [SerializeField] int[] banNumber;
     int[] pathNumber;
     System.Random rnd;
 
@@ -117,6 +118,7 @@ public class UIControl : Singleton<UIControl>
             for (int j = 1; j <= 3; j++) randomPool.Add(i);
         for (int i = 1; i < 7; i++)
             for (int j = 3; j >= 0; j--) randomPool.Add(i);
+        eventSystem.AddListener(EEvent.OnGameLogicOver, OnGameOver);
     }
     private void Start()
     {
@@ -379,13 +381,20 @@ public class UIControl : Singleton<UIControl>
     }
     void ExitGame()
     {
-        // 发送结束游戏请求
+        foreach (Character character in characters)
+        {
+            Destroy(character.gameObject);
+        }
+        characters.Clear();
         stage = -1;
         action = Action.None;
         foreach (Transform tran in map.transform)
         {
             Destroy(tran.gameObject);
         }
+        Destroy(map.gameObject);
+        eventSystem.RemoveListener(EEvent.OnGameLogicOver, OnGameOver);
+        Destroy(gameObject);
     }
     Point GetPoint(int i, int j)
     {
@@ -580,9 +589,20 @@ public class UIControl : Singleton<UIControl>
             ChangeControl();
         } else if (fh.OpretionId == 101) // ChangeStage
         {
-            StageCheck();
+            StageCheck(); 
         }
         return true;
     }
     #endregion
+    public void OnClickReturn()
+    {
+        ServiceLocator.Get<GameLogicService>().SendGameOver();
+        ServiceLocator.Get<RoomService>().SendGameOver2();
+    }
+    private void OnGameOver()
+    {
+        ExitGame();
+        UIManager.GetInstance().CloseUIForms("Classic");
+        UIManager.GetInstance().ShowUIForms("UIMain");
+    }
 }

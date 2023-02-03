@@ -67,7 +67,7 @@ public class GameData {
     #region Data For GameConfig
     //Game Mode
     public static BattleMode battleMode = BattleMode.None;
-    #endregion
+    #endregion 
     
 
     

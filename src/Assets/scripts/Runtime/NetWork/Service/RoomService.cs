@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using static Assets.scripts.Utils.enums.BattleModeEnum;
 using GameLogic;
 using Services;
+using System.Diagnostics;
 
 namespace NetWork
 {
@@ -376,7 +377,9 @@ namespace NetWork
             LogUtil.log("SendGameOver2");
         }
 
-        public void OnGameOver2() {
+        public void OnGameOver2()
+        {
+            eventSystem.Invoke(EEvent.OnGameLogicOver);
             NetBattleClient.GetInstance().Close();
             LogUtil.log("GameOver2");
         }
