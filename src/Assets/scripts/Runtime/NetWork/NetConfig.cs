@@ -10,7 +10,7 @@ namespace NetWork
     {
         public const int FrameTime = 50;
 
-        public const int MessageDispatchSpeed = 15;
+        public const int MessageDispatchSpeed = 100;
         //public static string UdpIp = "127.0.0.1";
         //public static int UdpPort = 8001;
         public static string UdpIp = "124.221.226.227";

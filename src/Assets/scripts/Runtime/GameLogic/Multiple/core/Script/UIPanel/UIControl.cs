@@ -159,6 +159,7 @@ public class UIControl : Singleton<UIControl>
     void PlayerPath(Point target) // 设置路径点
     {
         // 判断
+        if (pathNumber[nowPlayer] <= 0) return;
         if (target.CompareTagsUnion(new string[] { "EndPoint", "PathPoint"})) return;
         // 结束判断
 
@@ -190,6 +191,7 @@ public class UIControl : Singleton<UIControl>
     void PlayerBan(Point target) // 设置 Ban 点
     {
         // 判断
+        if (banNumber[nowPlayer] <= 0) return;
         if (target.CompareTagsUnion(new string[] { "PathPoint", "Ban", "EndPoint"})) return;
         if (!isAvailable(target)) return;
         // 结束判断

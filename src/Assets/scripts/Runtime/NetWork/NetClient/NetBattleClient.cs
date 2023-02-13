@@ -56,8 +56,10 @@ namespace NetWork
 
 		public void StartHeartBeat()
 		{
+			/*
 			timerTask1.OnComplete += HeartBeat;
 			timerTask1.Initialize(0.5f);
+			*/
 		}
 
 		private void HeartBeat(float p)
@@ -119,7 +121,7 @@ namespace NetWork
 				}
 				else
 				{
-					Close();
+                    TcpSocket.Close();
 				}
 			}
 			catch (Exception ex)
@@ -176,9 +178,9 @@ namespace NetWork
 			try
 			{
 
-				if (timerTask1 != null) { timerTask1.Paused=true; }
+				// if (timerTask1 != null) { timerTask1.Paused=true; }
 
-				TcpSocket.Close();
+				// TcpSocket.Close();
 			}
 			catch (Exception ex)
 			{
