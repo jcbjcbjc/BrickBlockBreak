@@ -2,9 +2,13 @@
 
 ## 开发人员
 客户端：
-@ [李韦成](https://github.com/TivatAmber)
+@ [李韦成](https://github.com/TivatAmber)（华中科技大学计算机学院22级）
+
+后端：
+@ [贾超博]（https://github.com/jcbjcbjc）(华中科技大学软件学院21级)
+
 美术：
-@ 王博涛
+@ 王博涛 (华中科技大学自动化学院21级)
 
 ## 更新计划
 - 实现6v6模式
