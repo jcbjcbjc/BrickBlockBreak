@@ -1,5 +1,9 @@
 # unique-project-client
 
+## 开发人员
+@ [李韦成](https://github.com/TivatAmber)
+
+
 ## 更新计划
 - 实现6v6模式
  
